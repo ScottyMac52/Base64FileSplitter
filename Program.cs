@@ -41,7 +41,7 @@ namespace Base64FileSplitter
 			var splitParts = splitter.SplitFile();
 			Parallel.ForEach(splitParts, async (part) =>
 			{
-				var fileName = Path.Combine(fileInfo.Directory.FullName, fileInfo.Name.Replace(".", $"{part.Number}"));
+				var fileName = Path.Combine(fileInfo.Directory.FullName, fileInfo.Name.Replace(".", $"-{part.Number}."));
 				await File.WriteAllTextAsync(fileName, part.Base64Fragment);
 			});
 			WriteMessageToConsole($"File was split into {splitParts.Count()} parts");
