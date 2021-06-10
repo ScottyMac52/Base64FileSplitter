@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Base64FileSplitter": {
+      "commandName": "Project",
+      "commandLineArgs": "-f C:\\Users\\v-mimci\\Downloads\\guardian-installer-win-x64.exe"
+    }
+  }
+}
